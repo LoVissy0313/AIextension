@@ -1,37 +1,39 @@
 {
-    "manifest_version": 3,
-    "name": "AI Notes Saver",
-    "version": "1.0",
-    "description": "保存AI对话记录",
-    "permissions": [
-        "activeTab",
-        "storage"
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://chat.openai.com/*",
-                "https://poe.com/*"
-            ],
-            "js": [
-                "content.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "preview.html"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Your Extension Name",
+  "version": "1.0",
+  "description": "Your Extension Description",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "styles/mycss.css"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "preview/preview.html",
+        "preview/preview.js",
+        "preview/preview-page.js",
+        "styles/mycss.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
