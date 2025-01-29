@@ -36,3 +36,12 @@ function convertHtmlToMarkdown(html) {
         .replace(/<a href="(.*?)">(.*?)<\/a>/g, '[$2]($1)')
         .replace(/<br\s*\/?>/g, '\n');
 }
+
+// 触发器
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'exportToMarkdown') {
+        const markdown = exportToMarkdown(request.conversations);
+        sendResponse({ markdown });
+    }
+    return true;
+});

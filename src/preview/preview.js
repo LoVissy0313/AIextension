@@ -74,7 +74,7 @@ async function saveTemporaryData(key, data) {
 // 打开预览标签页
 async function openPreviewTab(previewKey) {
     try {
-        const previewUrl = `${chrome.runtime.getURL('preview/preview.html')}?key=${previewKey}`;
+        const previewUrl = `${chrome.runtime.getURL('src/preview/preview.html')}?key=${previewKey}`;
         await chrome.tabs.create({ url: previewUrl });
     } catch (error) {
         throw new Error(`打开预览标签页失败: ${error.message}`);

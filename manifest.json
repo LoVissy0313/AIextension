@@ -11,7 +11,7 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "src/background/background.js"
   },
   "action": {
     "default_popup": "src/popup/popup.html"
@@ -33,9 +33,10 @@
     {
       "resources": [
         "src/preview/preview.html",
-        "src/preview.js",
-        "src/preview-page.js",
-        "src/styles/mycss.css"
+        "src/preview/preview.js",
+        "src/preview/preview-page.js",
+        "src/styles/mycss.css",
+        "src/download/exportToMarkdown.js"
       ],
       "matches": [
         "<all_urls>"

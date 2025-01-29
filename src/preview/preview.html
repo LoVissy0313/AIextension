@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>对话预览</title>
-    <link rel="stylesheet" href="mycss.css">
+    <link rel="stylesheet" href="/src/styles/mycss.css">
 </head>
 
 <body>
@@ -13,13 +13,11 @@
         <div class="header">
             <h1>AI对话预览</h1>
         </div>
+        <button class="btn btn-primary" id="exportMarkdownBtn">导出.md</button>
         <div id="previewContent"></div>
     </div>
-    <button id="downloadChat">下载保存的对话</button>
-    <script src="../download/download.js"></script>
-    <script src="prewiew-page.js"></script>
-    <button id="exportToMarkdown">导出为Markdown</button>
-    <script src="../download/exportToMarkdown.js"></script>
+    <script src="/src/preview/preview-page.js"></script>
+    <script src="/src/download/exportToMarkdown.js"></script>
 </body>
 
 </html>
